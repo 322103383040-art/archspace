@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARCH SPACE | Interior Design</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<!-- Enquiry Popup -->
+<div id="enquiryPopup" class="enquiry-popup">
+
+    <div class="enquiry-box">
+
+        <button class="close-enquiry" onclick="closeEnquiry()">
+            &times;
+        </button>
+
+        <h2>Have an Enquiry?</h2>
+        <p>We'd love to hear from you. Send us your requirements.</p>
+
+        <form action="https://formspree.io/f/xvkgaggk" method="POST">
+
+            <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                required
+            >
+
+            <div class="phone-field">
+                <span class="country-code">+91</span>
+
+                <input
+                    type="tel"
+                    name="number"
+                    placeholder="Your 10-digit number"
+                    maxlength="10"
+                    pattern="[6-9][0-9]{9}"
+                    inputmode="numeric"
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                    required
+                >
+            </div>
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+            >
+
+            <textarea
+                name="message"
+                placeholder="Your Message"
+                required
+            ></textarea>
+
+            <button type="submit">
+                SEND ENQUIRY
+            </button>
+
+        </form>
+    </div>
+
+</div>
+
+<script>
+setTimeout(function() {
+    document.getElementById("enquiryPopup").style.display = "flex";
+}, 5000);
+
+    // Close popup
+    function closeEnquiry() {
+
+        document.getElementById("enquiryPopup").style.display = "none";
+
+    }
+
+</script>
+
+
+
+
+<body>
+
+<header>
+<div class="logo">
+    <img src="assets/hero.png" alt="image">
+    <span class="text">ARCH SPACE INTERIORS</span>
+</div>
+<!-- Toggle button INSIDE header -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Navigation -->
+    <nav id="navMenu">
+        <a href="#">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#portfolio">PORTFOLIO</a>
+        <a href="#services">SERVICES</a>
+        <a href="#contact">CONTACT</a>
+    </nav>
+
+</header>
+
+</header>
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
+
+menuToggle.addEventListener("click", () => {
+    menuToggle.classList.toggle("active");
+    navMenu.classList.toggle("active");
+});
+</script>
+
+
+<section class="hero">
+
+<div class="overlay"></div>
+
+<div class="hero-content">
+
+<h1>
+Designing Spaces That Feel Like Home
+</h1>
+
+<p>
+Luxury Interior Design Studio
+</p>
+
+<a href="#portfolio" class="btn">
+Explore Projects
+</a>
+
+</div>
+
+</section>
+
+<section id="about" class="about">
+
+<div class="image">
+
+<img src="assets/about.jpeg">
+
+</div>
+
+<div class="text">
+
+<h2>ABOUT US</h2>
+<p>
+We turn ideas into spaces that tell a story.<br>Our designs blend creativity, functionality, and personality to create interiors that are visually striking yet comfortable to live in. From the first sketch to the final detail, we work closely with our clients to bring their vision to life.<br>Your space. Your story. Our design.
+</p>
+</div>
+</section>
+
+<section id="portfolio" class="portfolio">
+
+<h2>PROJECTS</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="assets/hall.jpeg">
+<h3>Hall</h3>
+</div>
+<div class="card">
+<img src="assets/terrace.jpeg">
+<h3>Terrace Lounge</h3>
+</div>
+<div class="card">
+<img src="assets/theatre.jpeg">
+<h3>Home Theatres</h3>
+</div>
+<div class="card">
+<img src="assets/modular.jpeg">
+<h3>Modular Kitchen</h3>
+</div>
+
+<div class="card">
+<img src="assets/wardrobe.jpeg">
+<h3>Wardrobe</h3>
+</div>
+
+<div class="card">
+<img src="assets/ma.jpeg">
+<h3>Dinning Hall</h3>
+</div>
+
+</div>
+
+</section>
+
+<section id="services" class="services">
+
+<h2>Services</h2>
+
+<div class="service-grid">
+
+<div>
+
+<h3>Residential Interiors</h3>
+<p>
+1BHK, 2BHK, 3BHK &Villas
+</p>
+
+</div>
+<div>
+
+<h3>Commercial Interiors</h3>
+<p>
+Offices, Shops, Salons &Showrooms
+</p>
+
+</div>
+<div>
+
+<h3>Modular Kitchens</h3>
+<p>
+Modern cooking space
+</p>
+
+</div>
+<div>
+
+<h3>Wardrobes & Custom Furniture</h3>
+<p>
+Complete residential interiors.
+</p>
+
+</div>
+
+<div>
+
+<h3>Sofa & Upholstery Works</h3>
+
+<p>
+Curated premium furniture.
+</p>
+
+</div>
+
+<div>
+
+<h3>Home Theatres</h3>
+
+<p>
+Ultimate cinematic experience
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contacts" class="contacts">
+
+<h2>Let's Create Something Beautiful</h2>
+
+<form action="https://formspree.io/f/xvkgaggk" method="POST"> 
+    <input type="text" name="name" placeholder="Your Name" required > 
+    <div class="phone"> 
+        
+        <input type="tel" name="number" placeholder="Your 10-digit number" maxlength="10" pattern="[6-9][0-9]{9}" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required > 
+    </div> 
+    <input type="email" name="email" placeholder="Your Email" required > 
+    <textarea name="message" placeholder="Your Message" required ></textarea> 
+    <button type="submit">SEND MESSAGE</button> </form>
+
+</section>
+
+<footer>
+<section id="contact" class="contact">
+<div class="contact-details">
+
+    <!-- Phone -->
+    <div class="phone-contact">
+
+    <i class="fa-solid fa-phone"></i>
+    <small>CALL US</small>
+
+    <div class="phone-numbers">
+        <a href="tel:+918074470232">+91 80744 70232</a>
+        <a href="tel:+918333936667">+91 83339 36667</a>
+    </div>
+
+</div>
+    <!-- Email -->
+    <a href="mailto:Archspaceinteriors95@gmail.com" class="contact-item">
+        <i class="fa-solid fa-envelope"></i>
+        <div>
+            <small>EMAIL US</small>
+            <p>Archspaceinteriors95@gmail.com</p>
+        </div>
+    </a>
+
+    <!-- Instagram -->
+    <a
+        href="https://www.instagram.com/archspace_interiors/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="contact-item"
+        href="https://www.instagram.com/archspace_interiors/" target="_blank">
+    <i class="fa-brands fa-instagram"></i>
+
+    
+        <div>
+            <small>FOLLOW US</small>
+            <p>@ARCHSPACE_INTERIORS</p>
+        </div>
+    </a>
+
+</div>
+
+
+</section>
+
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
